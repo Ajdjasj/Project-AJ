@@ -1,0 +1,657 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TServerSuite xmlns:b="urn:amd-build" id="ssd" name="sddiag" version="1.5" description="SB SD Card Suite">
+	<Device id="sb.9.sdflash"/>
+	<Test id="001" alt="SDCardDetectTest" description="Card detection =&gt;">
+		<Variation id="001" description="Card Detect">
+			<Parameter name="type">1</Parameter>
+		</Variation>
+	</Test>
+
+    <!-- <Test id="038" alt="SleepStatesTest" description="Sleep State test">
+		<Parameter name="drive">G</Parameter>
+    </Test>	
+	
+	<Test id="002" alt="SDWriteProtectTest" description="Card Write Protect Pin test - Manual">
+	</Test>	
+	-->
+	<Test id="003" alt="SDCardInitTest" description="Initialize test">
+	</Test>
+	
+	<!--
+	<Test id="004" alt="SDVoltageSwitchTest" description="Voltage Switch test - Need UHS-I card">
+	</Test>
+	-->
+	<Test id="005" alt="SDCardLockUnlockTest" description="Lock/Unlock test">
+	</Test>
+	
+	<Test id="006" alt="SDCardForceEraseTest" description="Force Erase test">
+	</Test>
+	
+	<!--
+	<Test id="007" alt="SDHostRegistersTest" description="Host Registers test">
+	</Test>
+	
+	<Test id="008" alt="SDSoftwareResetTest" description="Software Reset test">
+	</Test> 
+
+	<Test id="009" alt="SDCardRegisterTest" description="Card Registers test">
+	</Test>
+
+	<Test id="010" alt="SDForceEventTest" description="Force Event test">
+	</Test>
+	
+	<Test id="011" alt="SDCardSDStatusTest" description="Card Status and SD Status test">
+	</Test>
+	
+	<Test id="012" alt="SDCardLEDControlTest" description="LED ON/OFF test - Manual">
+	</Test>
+	
+    <Test id="013" alt="SDDeviceIdTest" description="Device ID verification Test">
+		<Parameter name="deviceid">0x7813</Parameter>
+    </Test>
+	
+	<Test id="014" alt="SDCardInsertSimulationTest" description="Card Insert/Removal Simulation test">
+	</Test>
+ 
+	<Test id="015" alt="SDCardBackdoorOverwriteTest" description="Backdoor Overwrite test">
+	</Test>
+  
+	<Test id="016" alt="SDCardFifoTest" description="Input FIFO test">
+	</Test>
+    
+	<Test id="017" alt="SDFeedBackClockTest" description="FeedBack Clock option">
+	</Test>	
+	
+	<Test id="018" alt="SDCardMiscCommandTest" description="Misc Command test">
+	</Test>
+	
+	<Test id="019" alt="SDDeviceClassRWTest" description="Backdoor change the device Class and Sub class">
+	</Test>
+
+    <Test id="020" alt="AlinkClockGating" description="Alink Clock Gating and Data transfer test">
+		<Parameter name="drive">G</Parameter>
+    </Test>	
+	-->
+	<!--<Test id="021" alt="MemPowerSaving" description="Memory Power Saving and Data transfer test">
+		<Parameter name="drive">G</Parameter>
+    </Test>	 not tested -->	
+	
+	<!--
+	<Test id="022" alt="SDCardSdhcSdxcPioReadWriteTest" description="PIO Data Transfer -&gt;">
+		<Variation id="001" description="PIO single block Read/Write test">
+			<Parameter name="type">1</Parameter>
+		</Variation>
+	
+		<Variation id="002" description="PIO multi  block Read/Write test">
+			<Parameter name="type">2</Parameter>
+		</Variation>	
+	</Test>
+
+	<Test id="023" alt="SDCardSdmaReadWriteTest" description="SDMA Data Transfer -&gt;">
+		<Variation id="001" description="SDMA Single block Read/Write test">
+			<Parameter name="type">1</Parameter>
+		</Variation>
+	
+		<Variation id="002" description="SDMA multi  block Read/Write test">
+			<Parameter name="type">2</Parameter>
+		</Variation>	
+	</Test>
+
+	<Test id="024" alt="SDCardAdmaReadWriteTest" description="ADMA Data Transfer -&gt;">
+		<Variation id="001" description="ADMA single block Read/Write test">
+			<Parameter name="type">1</Parameter>
+		</Variation>
+	
+		<Variation id="002" description="ADMA multi  block Read/Write test">
+			<Parameter name="type">2</Parameter>
+		</Variation>	
+	</Test>  	
+	
+	<Test id="025" alt="SDCardDataEraseTest" description="Data Erase test">
+	</Test>
+	
+	<Test id="026" alt="SDSwitchFuntionTest" description="Switch Function -&gt;">
+  		<Variation id="001" description="Switch to Default Speed Mode test">
+			<Parameter name="mode">1</Parameter>
+			<Parameter name="type">1</Parameter>
+		</Variation>	
+
+		<Variation id="002" description="Switch to High    Speed Mode test">
+			<Parameter name="mode">2</Parameter>
+			<Parameter name="type">1</Parameter>
+		</Variation>
+
+		<Variation id="003" description="Switch to SDR12   Speed Mode test - Need UHS50/UHS104 Card">
+			<Parameter name="mode">1</Parameter>
+			<Parameter name="type">2</Parameter>
+		</Variation>
+		
+		<Variation id="004" description="Switch to SDR25   Speed Mode test - Need UHS50/UHS104 Card">
+			<Parameter name="mode">2</Parameter>
+			<Parameter name="type">2</Parameter>
+		</Variation>
+		
+		<Variation id="005" description="Switch to SDR50   Speed Mode test - Need UHS50/UHS104 Card">
+			<Parameter name="mode">4</Parameter>
+			<Parameter name="type">2</Parameter>
+		</Variation>
+
+		<Variation id="006" description="Switch to SDR104  Speed Mode test - Need UHS50/UHS104 Card">
+			<Parameter name="mode">8</Parameter>
+			<Parameter name="type">2</Parameter>
+		</Variation>
+
+		<Variation id="007" description="Switch to DDR50  Speed Mode test - Need DDR50 Card">
+			<Parameter name="mode">10</Parameter>
+			<Parameter name="type">2</Parameter>
+		</Variation>		
+
+	</Test>
+
+   <Test id="027" alt="SDSpeedModeTest" description="Speed Modes -&gt;">
+		<Variation id="001" description="Default Speed Mode test(SD2.0/SD3.0)">
+			<Parameter name="mode">1</Parameter>
+			<Parameter name="type">1</Parameter>
+		</Variation>	
+
+		<Variation id="002" description="High    Speed Mode test(SD2.0/SD3.0)">
+			<Parameter name="mode">2</Parameter>
+			<Parameter name="type">1</Parameter>
+		</Variation>
+
+		<Variation id="003" description="SDR12   Speed Mode test - Need UHS50/UHS104 Card(SD3.0)">
+			<Parameter name="mode">1</Parameter>
+			<Parameter name="type">2</Parameter>
+		</Variation>
+		
+		<Variation id="004" description="SDR25   Speed Mode test - Need UHS50/UHS104 Card(SD3.0)">
+			<Parameter name="mode">2</Parameter>
+			<Parameter name="type">2</Parameter>
+		</Variation>
+		
+		<Variation id="005" description="SDR50   Speed Mode test - Need UHS50/UHS104 Card(SD3.0)">
+			<Parameter name="mode">4</Parameter>
+			<Parameter name="type">2</Parameter>
+		</Variation>
+
+		<Variation id="006" description="SDR104  Speed Mode test - Need UHS104 Card(SD3.0)">
+			<Parameter name="mode">8</Parameter>
+			<Parameter name="type">2</Parameter>
+		</Variation>
+
+		<Variation id="007" description="DDR50  Speed Mode test - Need DDR50 Card(SD3.0 DDR)">
+			<Parameter name="mode">10</Parameter>
+			<Parameter name="type">2</Parameter>
+		</Variation>
+		
+   </Test>
+   -->
+    <Test id="028" alt="SDPowerPinTest" description="Power Pin -&gt;">
+		<Variation id="001" description="Power Pin test - Card Inactive-&gt;PowerCycle-&gt;Card Should be active">
+			<Parameter name="type">1</Parameter>
+			<Parameter name="powercycledelay">100</Parameter>
+		</Variation>	
+
+		<Variation id="002" description="Power Pin test - (Need UHS-I Card): Card Voltage Switch-&gt;PowerCycle-&gt;Card Voltage Switch">
+			<Parameter name="type">2</Parameter>
+			<Parameter name="powercycledelay">100</Parameter>			
+		</Variation>
+	</Test>
+   
+   <!--
+	<Test id="029" alt="SDTuningProcedureTest" description="Tuning Procedure -&gt;">
+		<Variation id="001" description="SDR50 Tuning Procedure  - Need UHS50/UHS104 Card">
+			<Parameter name="type">1</Parameter>
+		</Variation>	
+
+		<Variation id="002" description="SDR104 Tuning Procedure - Need UHS104 Card">
+			<Parameter name="type">2</Parameter>
+		</Variation>
+	</Test>
+   
+	<Test id="030" alt="SDPresetvalueTest" description="Preset Value -&gt;">
+		<Variation id="001" description="Preset Value Selection For Default Speed Mode">
+			<Parameter name="mode">1</Parameter>
+			<Parameter name="type">1</Parameter>
+		</Variation>	
+
+		<Variation id="002" description="Preset Value Selection For High    Speed Mode">
+			<Parameter name="mode">2</Parameter>
+			<Parameter name="type">1</Parameter>
+		</Variation>
+
+		<Variation id="003" description="Preset Value Selection For SDR12   Speed Mode - Need UHS50/UHS104 Card">
+			<Parameter name="mode">1</Parameter>
+			<Parameter name="type">2</Parameter>
+		</Variation>
+		
+		<Variation id="004" description="Preset Value Selection For SDR25   Speed Mode - Need UHS50/UHS104 Card">
+			<Parameter name="mode">2</Parameter>
+			<Parameter name="type">2</Parameter>
+		</Variation>
+		
+		<Variation id="005" description="Preset Value Selection For SDR50   Speed Mode - Need UHS50/UHS104 Card">
+			<Parameter name="mode">4</Parameter>
+			<Parameter name="type">2</Parameter>
+		</Variation>
+
+		<Variation id="006" description="Preset Value Selection For SDR104  Speed Mode - Need UHS104 Card">
+			<Parameter name="mode">8</Parameter>
+			<Parameter name="type">2</Parameter>
+		</Variation>
+		
+		<Variation id="007" description="Preset Value Selection For DDR50  Speed Mode - Need DDR50 Card">
+			<Parameter name="mode">10</Parameter>
+			<Parameter name="type">2</Parameter>
+		</Variation>
+		
+    </Test>
+
+    <Test id="031" alt="SDAbortTransactionTest" description="Abort Transaction -&gt; ">
+		<Variation id="001" description="Asynchronus Abort - Default Speed mode">
+			<Parameter name="cardtype">1</Parameter>
+			<Parameter name="mode">1</Parameter>
+			<Parameter name="aborttype">1</Parameter>
+		</Variation>
+		
+		<Variation id="002" description="Asynchronus Abort - High    Speed mode">
+			<Parameter name="cardtype">1</Parameter>
+			<Parameter name="mode">2</Parameter>
+			<Parameter name="aborttype">1</Parameter>
+		</Variation>
+		
+		<Variation id="003" description="Asynchronus Abort - SDR12   Speed mode - Need UHS50/UHS104 Card">
+			<Parameter name="cardtype">2</Parameter>
+			<Parameter name="mode">1</Parameter>
+			<Parameter name="aborttype">1</Parameter>
+		</Variation>
+		
+		<Variation id="004" description="Asynchronus Abort - SDR25   Speed mode - Need UHS50/UHS104 Card">
+			<Parameter name="cardtype">2</Parameter>
+			<Parameter name="mode">2</Parameter>
+			<Parameter name="aborttype">1</Parameter>
+		</Variation>
+		
+		<Variation id="005" description="Asynchronus Abort - SDR50   Speed mode - Need UHS50/UHS104 Card">
+			<Parameter name="cardtype">2</Parameter>
+			<Parameter name="mode">4</Parameter>
+			<Parameter name="aborttype">1</Parameter>
+		</Variation>
+		
+		<Variation id="006" description="Asynchronus Abort - SDR104  Speed mode - Need       UHS104 Card">
+			<Parameter name="cardtype">2</Parameter>
+			<Parameter name="mode">8</Parameter>
+			<Parameter name="aborttype">1</Parameter>
+		</Variation>
+		
+		<Variation id="007" description="Asynchronus Abort - DDR50  Speed mode - Need       DDR50 Card">
+			<Parameter name="cardtype">2</Parameter>
+			<Parameter name="mode">10</Parameter>
+			<Parameter name="aborttype">1</Parameter>
+		</Variation>
+		
+		<Variation id="008" description="Synchronus  Abort - Default Speed mode">
+			<Parameter name="cardtype">1</Parameter>
+			<Parameter name="mode">1</Parameter>
+			<Parameter name="aborttype">2</Parameter>
+		</Variation>
+		
+		<Variation id="009" description="Synchronus  Abort - High    Speed mode">
+			<Parameter name="cardtype">1</Parameter>
+			<Parameter name="mode">2</Parameter>
+			<Parameter name="aborttype">2</Parameter>
+		</Variation>
+		
+		<Variation id="010" description="Synchronus  Abort - SDR12   Speed mode - Need UHS50/UHS104 Card">
+			<Parameter name="cardtype">2</Parameter>
+			<Parameter name="mode">1</Parameter>
+			<Parameter name="aborttype">2</Parameter>
+		</Variation>
+		
+		<Variation id="011" description="Synchronus  Abort - SDR25   Speed mode - Need UHS50/UHS104 Card">
+			<Parameter name="cardtype">2</Parameter>
+			<Parameter name="mode">2</Parameter>
+			<Parameter name="aborttype">2</Parameter>
+		</Variation>
+		
+		<Variation id="012" description="Synchronus  Abort - SDR50   Speed mode - Need UHS50/UHS104 Card">
+			<Parameter name="cardtype">2</Parameter>
+			<Parameter name="mode">4</Parameter>
+			<Parameter name="aborttype">2</Parameter>
+		</Variation>
+		
+		<Variation id="013" description="Synchronus  Abort - SDR104  Speed mode - Need       UHS104 Card">
+			<Parameter name="cardtype">2</Parameter>
+			<Parameter name="mode">8</Parameter>
+			<Parameter name="aborttype">2</Parameter>
+		</Variation>
+		
+		<Variation id="014" description="Synchronus  Abort - DDR50  Speed mode - Need       DDR50 Card">
+			<Parameter name="cardtype">2</Parameter>
+			<Parameter name="mode">10</Parameter>
+			<Parameter name="aborttype">2</Parameter>
+		</Variation>
+    </Test>	
+
+	<Test id="032" alt="INTx_MSI_interrutp" description="INTx MSI interrutp -&gt;">
+		<Parameter name="drive">G</Parameter>
+		<Parameter name="vector">0x30</Parameter>
+
+		<Variation id="001" description="INTx  Interrupt Test">
+			<Parameter name="type">1</Parameter>
+		</Variation>
+		
+		<Variation id="002" description="MSI32 Interrupt Test">
+			<Parameter name="type">2</Parameter>
+		</Variation>
+		
+		<Variation id="003" description="MSI64 Interrupt Test">
+			<Parameter name="type">3</Parameter>
+		</Variation>	
+	</Test>	
+	
+	<Test id="033" alt="SDTuningModeTest" description="SDR 50  Tuning Modes -&gt;">
+	
+		<Variation id="001" description="Tuning Mode1(2mb  of data x 100 times) - Need UHS50/UHS104 Card">
+			<Parameter name="speedmode">1</Parameter>
+			<Parameter name="tuningmode">1</Parameter>
+			<Parameter name="transloop">100</Parameter>
+			<Parameter name="datasize">2</Parameter>
+		</Variation>	
+
+		<Variation id="002" description="Tuning Mode2(2mb  of data x 100 times) - Need UHS50/UHS104 Card">
+			<Parameter name="speedmode">1</Parameter>
+			<Parameter name="tuningmode">2</Parameter>
+			<Parameter name="transloop">100</Parameter>
+			<Parameter name="datasize">2</Parameter>
+		</Variation>
+		<Variation id="003" description="Tuning Mode1(4mb  of data x 100 times) - Need UHS50/UHS104 Card">
+			<Parameter name="speedmode">1</Parameter>
+			<Parameter name="tuningmode">1</Parameter>
+			<Parameter name="transloop">100</Parameter>
+			<Parameter name="datasize">4</Parameter>
+		</Variation>	
+
+		<Variation id="004" description="Tuning Mode2(4mb  of data x 100 times) - Need UHS50/UHS104 Card">
+			<Parameter name="speedmode">1</Parameter>
+			<Parameter name="tuningmode">2</Parameter>
+			<Parameter name="transloop">100</Parameter>
+			<Parameter name="datasize">4</Parameter>
+		</Variation>
+		
+		<Variation id="005" description="Tuning Mode1(10mb of data x 100 times) - Need UHS50/UHS104 Card">
+			<Parameter name="speedmode">1</Parameter>
+			<Parameter name="tuningmode">1</Parameter>
+			<Parameter name="transloop">100</Parameter>
+			<Parameter name="datasize">10</Parameter>
+		</Variation>	
+
+		<Variation id="006" description="Tuning Mode2(10mb of data x 100 times) - Need UHS50/UHS104 Card">
+			<Parameter name="speedmode">1</Parameter>
+			<Parameter name="tuningmode">2</Parameter>
+			<Parameter name="transloop">100</Parameter>
+			<Parameter name="datasize">10</Parameter>
+		</Variation>
+		
+		<Variation id="007" description="Tuning Mode1(10mb of data x 500 times) - Need UHS50/UHS104 Card">
+			<Parameter name="speedmode">1</Parameter>
+			<Parameter name="tuningmode">1</Parameter>
+			<Parameter name="transloop">500</Parameter>
+			<Parameter name="datasize">10</Parameter>
+		</Variation>	
+
+		<Variation id="008" description="Tuning Mode2(10mb of data x 500 times) - Need UHS50/UHS104 Card">
+			<Parameter name="speedmode">1</Parameter>
+			<Parameter name="tuningmode">2</Parameter>
+			<Parameter name="transloop">500</Parameter>
+			<Parameter name="datasize">10</Parameter>
+		</Variation>
+	</Test>
+	
+	<Test id="034" alt="SDTuningModeTest" description="SDR 104 Tuning Modes -&gt;">
+		<Variation id="001" description="Tuning Mode1(2mb  of data x 100 times) - Need UHS104 Card">
+			<Parameter name="speedmode">2</Parameter>
+			<Parameter name="tuningmode">1</Parameter>
+			<Parameter name="transloop">100</Parameter>
+			<Parameter name="datasize">2</Parameter>
+		</Variation>	
+
+		<Variation id="002" description="Tuning Mode2(2mb  of data x 100 times) - Need UHS104 Card">
+			<Parameter name="speedmode">2</Parameter>
+			<Parameter name="tuningmode">2</Parameter>
+			<Parameter name="transloop">100</Parameter>
+			<Parameter name="datasize">2</Parameter>
+		</Variation>
+		<Variation id="003" description="Tuning Mode1(4mb  of data x 100 times) - Need UHS104 Card">
+			<Parameter name="speedmode">2</Parameter>
+			<Parameter name="tuningmode">1</Parameter>
+			<Parameter name="transloop">100</Parameter>
+			<Parameter name="datasize">4</Parameter>
+		</Variation>	
+
+		<Variation id="004" description="Tuning Mode2(4mb  of data x 100 times) - Need UHS104 Card">
+			<Parameter name="speedmode">2</Parameter>
+			<Parameter name="tuningmode">2</Parameter>
+			<Parameter name="transloop">100</Parameter>
+			<Parameter name="datasize">4</Parameter>
+		</Variation>
+		
+		<Variation id="005" description="Tuning Mode1(10mb of data x 100 times) - Need UHS104 Card">
+			<Parameter name="speedmode">2</Parameter>
+			<Parameter name="tuningmode">1</Parameter>
+			<Parameter name="transloop">100</Parameter>
+			<Parameter name="datasize">10</Parameter>
+		</Variation>	
+
+		<Variation id="006" description="Tuning Mode2(10mb of data x 100 times) - Need UHS104 Card">
+			<Parameter name="speedmode">2</Parameter>
+			<Parameter name="tuningmode">2</Parameter>
+			<Parameter name="transloop">100</Parameter>
+			<Parameter name="datasize">10</Parameter>
+		</Variation>
+		
+		<Variation id="007" description="Tuning Mode1(10mb of data x 500 times) - Need UHS104 Card">
+			<Parameter name="speedmode">2</Parameter>
+			<Parameter name="tuningmode">1</Parameter>
+			<Parameter name="transloop">500</Parameter>
+			<Parameter name="datasize">10</Parameter>
+		</Variation>	
+
+		<Variation id="008" description="Tuning Mode2(10mb of data x 500 times) - Need UHS104 Card">
+			<Parameter name="speedmode">2</Parameter>
+			<Parameter name="tuningmode">2</Parameter>
+			<Parameter name="transloop">500</Parameter>
+			<Parameter name="datasize">10</Parameter>
+		</Variation>
+    </Test>	
+   
+    <Test id="035" alt="SDCardAutoCMD23Test" description="Auto CMD23 -&gt;">
+		<Variation id="001" description="Default Speed Mode test">
+			<Parameter name="mode">1</Parameter>
+			<Parameter name="type">1</Parameter>
+		</Variation>	
+
+		<Variation id="002" description="Auto CMD23 in High    Speed Mode test">
+			<Parameter name="mode">2</Parameter>
+			<Parameter name="type">1</Parameter>
+		</Variation>
+
+		<Variation id="003" description="Auto CMD23 in SDR12   Speed Mode test - Need UHS50/UHS104 Card">
+			<Parameter name="mode">1</Parameter>
+			<Parameter name="type">2</Parameter>
+		</Variation>
+		
+		<Variation id="004" description="Auto CMD23 in SDR25   Speed Mode test - Need UHS50/UHS104 Card">
+			<Parameter name="mode">2</Parameter>
+			<Parameter name="type">2</Parameter>
+		</Variation>
+		
+		<Variation id="005" description="Auto CMD23 in SDR50   Speed Mode test - Need UHS50/UHS104 Card">
+			<Parameter name="mode">4</Parameter>
+			<Parameter name="type">2</Parameter>
+		</Variation>
+
+		<Variation id="006" description="Auto CMD23 in SDR104  Speed Mode test - Need UHS104 Card">
+			<Parameter name="mode">8</Parameter>
+			<Parameter name="type">2</Parameter>
+		</Variation>	
+
+		<Variation id="007" description="Auto CMD23 in DDR50  Speed Mode test - Need DDR50 Card">
+			<Parameter name="mode">10</Parameter>
+			<Parameter name="type">2</Parameter>
+		</Variation>		
+   </Test>
+   
+   <Test id="036" alt="SDIOInitTest" description="SDIO test -&gt;">
+   		<Variation id="001" description="SDIO Init">
+			<Parameter name="testid">1</Parameter>
+  	    </Variation>
+		
+		<Variation id="002" description="Direct(CMD52) and Extended(CMD53) read operation">
+			<Parameter name="testid">2</Parameter>
+  	    </Variation>
+		
+		<Variation id="003" description="Direct(CMD52) and Extended(CMD53) Write operation">
+			<Parameter name="testid">3</Parameter>
+  	    </Variation>
+		
+		<Variation id="004" description="Read CCCR and FBR">
+			<Parameter name="testid">4</Parameter>
+  	    </Variation>
+   </Test>  
+   
+   <Test id="037" alt="SDErrorRecoveryTest" description="Error Recovery -&gt;">
+		<Variation id="001" description="Default Speed Error Recovery test">
+			<Parameter name="mode">1</Parameter>
+			<Parameter name="type">1</Parameter>
+		</Variation>	
+
+		<Variation id="002" description="High    Speed Error Recovery test">
+			<Parameter name="mode">2</Parameter>
+			<Parameter name="type">1</Parameter>
+		</Variation>
+
+		<Variation id="003" description="SDR12   Speed Error Recovery test - Need UHS50/UHS104 Card">
+			<Parameter name="mode">1</Parameter>
+			<Parameter name="type">2</Parameter>
+		</Variation>
+		
+		<Variation id="004" description="SDR25   Speed Error Recovery test - Need UHS50/UHS104 Card">
+			<Parameter name="mode">2</Parameter>
+			<Parameter name="type">2</Parameter>
+		</Variation>
+		
+		<Variation id="005" description="SDR50   Speed Error Recovery test - Need UHS50/UHS104 Card">
+			<Parameter name="mode">4</Parameter>
+			<Parameter name="type">2</Parameter>
+		</Variation>
+
+		<Variation id="006" description="SDR104  Speed Error Recovery test - Need UHS104 Card">
+			<Parameter name="mode">8</Parameter>
+			<Parameter name="type">2</Parameter>
+		</Variation>
+
+		<Variation id="007" description="DDR50  Speed Error Recovery test - Need DDR50 Card">
+			<Parameter name="mode">10</Parameter>
+			<Parameter name="type">2</Parameter>
+		</Variation>		
+   </Test>
+   
+    <Test id="038" alt="SleepStatesTest" description="Sleep State test">
+		<Parameter name="drive">G</Parameter>
+    </Test>	
+	
+	<Test id="039" alt="SDClkFreqCalculationTest" description="Clk Frequency Calculation Test">
+    </Test>	
+	-->
+	
+	<Test id="040" alt="SDCompliance_1_6_3Test" description="SD Compliance 1.6-3 Test">
+			<Parameter name="mode">2</Parameter>
+			<Parameter name="type">1</Parameter>
+			<!--<Parameter name="device">1</Parameter>
+			<Parameter name="slots">1</Parameter> -->
+			<Parameter name="passcode">0123456789ABCDEF</Parameter>
+		</Test>	
+				
+	<Test id="041" alt="SDCompliance_1_6_4Test" description="SD Compliance 1.6-4 Test">
+		<!-- <Parameter name="device">1</Parameter>
+		<Parameter name="slots">1</Parameter> -->
+		<Parameter name="passcode">0123456789ABCDEF</Parameter>
+    </Test>	
+	
+	<Test id="042" alt="SDCompliance_3_2_7Test" description="SD Compliance 3.2-7 Test">
+    </Test>	
+	
+	<Test id="043" alt="SDCompliance_2_1_6Test" description="SD Compliance 2.1-6 Test">
+    </Test>
+	
+	
+	<Test id="044" alt="SDCompliance_2_1_9Test" description="SD Compliance 2.1-9 Test">
+    </Test>	
+	
+	
+	<Test id="045" alt="SDCompliance_2_1_18Test" description="SD Compliance 2.1-18 Test">
+    </Test>
+	
+	<Test id="046" alt="SDCompliance_2_1_1Test" description="SD Compliance 2.1-1 Test">
+    </Test>
+	
+	<Test id="047" alt="SDCompliance_2_1_2Test" description="SD Compliance 2.1-2 Test">
+    </Test>
+	
+	<Test id="048" alt="SDCompliance_2_1_36Test" description="SD Compliance 2.1-36 Test">
+    </Test>
+	
+	<Test id="049" alt="SDCompliance_2_2_9_14Test" description="SD Compliance 2.2-9 and 2.9-14 Test">
+		<!--<Parameter name="device">1</Parameter>
+		<Parameter name="slots">1</Parameter> -->
+		<Parameter name="passcode">0123456789ABCDEF</Parameter>
+    </Test>
+	
+	<Test id="050" alt="SDCompliance_4_1_5Test" description="SD Compliance 4.1-5 Test">
+    </Test>
+	
+	
+	<UserParameter name="argument" pattern = "integer" description="enter argument "/>
+	
+	<Test id="051" alt="SDCompliance_2_2_4Test" description="SD Compliance 2.2-4 Test">
+		<!-- <Parameter name="mode">2</Parameter>
+		<Parameter name="type">1</Parameter> -->
+		<Parameter name="argument">00000001</Parameter>
+    </Test>
+	
+	<Test id="052" alt="SDCompliance_2_1_13Test" description="SD Compliance 2.1-13 Test">
+    </Test>
+
+	<Test id="053" alt="SDCompliance_1_1_28Test" description="SD Compliance 1.1-28 Test">
+    </Test>
+ 	
+	<Test id="062" alt="SDCompliance_1_1_29Test" description="SD Compliance 1.1-29 Test">
+    </Test>
+ 
+	<Test id="055" alt="SDCompliance_1_6_6Test" description="SD Compliance 1.6-6 Test">
+    </Test>
+
+	<Test id="056" alt="SDCompliance_2_2_10Test" description="SD Compliance 2.2-10 Test">
+    </Test>
+
+	<Test id="057" alt="SDCompliance_2_1_17Test" description="SD Compliance 2.1-17 Test">
+    </Test>
+
+	<Test id="058" alt="SDCompliance_2_1_25Test" description="SD Compliance 2.1-25 Test">
+    </Test>
+
+	<Test id="059" alt="SDCompliance_2_1_23Test" description="SD Compliance 2.1-23 Test">
+    </Test>
+
+	<Test id="060" alt="SDCompliance_3_4_16Test" description="SD Compliance 3.4-16 Test">
+    </Test>
+
+	
+	<Test id="061" alt="SDCompliance_1_2_4Test" description="SD Compliance 1.2-4 Test">
+    </Test>
+  
+  <Test id="063" alt="SDCompliance_3_5_4Test" description="SD Compliance 3.5-4 Test">
+    </Test> 
+	
+</TServerSuite>
